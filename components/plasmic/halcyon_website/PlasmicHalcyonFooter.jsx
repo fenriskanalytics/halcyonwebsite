@@ -378,6 +378,7 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                 sty.homePage
               )}
               component={Link}
+              href={`/home`}
               platform={"nextjs"}
             >
               {"Home"}
@@ -392,9 +393,25 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                 sty.membershipsPage
               )}
               component={Link}
+              href={`/memberships`}
               platform={"nextjs"}
             >
               {"Memberships"}
+            </PlasmicLink__>
+            <PlasmicLink__
+              data-plasmic-name={"schedulePage"}
+              data-plasmic-override={overrides.schedulePage}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
+                sty.schedulePage
+              )}
+              component={Link}
+              href={`/schedule`}
+              platform={"nextjs"}
+            >
+              {"Schedule"}
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"privatesPage"}
@@ -420,6 +437,7 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                 sty.aboutUsPage
               )}
               component={Link}
+              href={`/about-us`}
               platform={"nextjs"}
             >
               {"About Us"}
@@ -434,6 +452,7 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                 sty.contactPage
               )}
               component={Link}
+              href={`/contact`}
               platform={"nextjs"}
             >
               {"Contact"}
@@ -449,6 +468,7 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                   sty.privacyPolicyPage
                 )}
                 component={Link}
+                href={`/privacy-policy`}
                 platform={"nextjs"}
                 tabIndex={1}
                 target={"_blank"}
@@ -465,6 +485,7 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                   sty.termsOfServicePage
                 )}
                 component={Link}
+                href={`/terms-of-service`}
                 platform={"nextjs"}
                 tabIndex={2}
                 target={"_blank"}
@@ -481,6 +502,7 @@ function PlasmicHalcyonFooter__RenderFunc(props) {
                   sty.cookiesPolicyPage
                 )}
                 component={Link}
+                href={`/cookies-policy`}
                 platform={"nextjs"}
                 tabIndex={3}
                 target={"_blank"}
@@ -603,6 +625,7 @@ const PlasmicDescendants = {
     "twitterIcon",
     "homePage",
     "membershipsPage",
+    "schedulePage",
     "privatesPage",
     "aboutUsPage",
     "contactPage",
@@ -624,6 +647,7 @@ const PlasmicDescendants = {
     "twitterIcon",
     "homePage",
     "membershipsPage",
+    "schedulePage",
     "privatesPage",
     "aboutUsPage",
     "contactPage",
@@ -643,6 +667,7 @@ const PlasmicDescendants = {
   twitterIcon: ["twitterIcon"],
   homePage: ["homePage"],
   membershipsPage: ["membershipsPage"],
+  schedulePage: ["schedulePage"],
   privatesPage: ["privatesPage"],
   aboutUsPage: ["aboutUsPage"],
   contactPage: ["contactPage"],
@@ -695,6 +720,7 @@ export const PlasmicHalcyonFooter = Object.assign(
     twitterIcon: makeNodeComponent("twitterIcon"),
     homePage: makeNodeComponent("homePage"),
     membershipsPage: makeNodeComponent("membershipsPage"),
+    schedulePage: makeNodeComponent("schedulePage"),
     privatesPage: makeNodeComponent("privatesPage"),
     aboutUsPage: makeNodeComponent("aboutUsPage"),
     contactPage: makeNodeComponent("contactPage"),

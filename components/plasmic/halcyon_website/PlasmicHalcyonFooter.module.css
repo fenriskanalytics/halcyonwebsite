@@ -391,6 +391,38 @@
     color: var(--token-3mCwTaeNipOV);
   }
 }
+.schedulePage {
+  position: relative;
+  color: var(--token-3mCwTaeNipOV);
+  font-size: 16px;
+  margin-top: calc(0px + 6px) !important;
+  margin-right: 0px;
+  margin-left: 0px;
+  align-self: auto;
+  margin-bottom: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  text-transform: none;
+  line-height: 1.5;
+  letter-spacing: normal;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  width: 100%;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .schedulePage {
+    margin-top: calc(0px + 4px) !important;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: calc(0px + 0px) !important;
+    color: var(--token-3mCwTaeNipOV);
+  }
+}
 .privatesPage {
   position: relative;
   color: var(--token-3mCwTaeNipOV);
