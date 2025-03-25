@@ -17,6 +17,10 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
+import SectionContactUs from "../../SectionContactUs"; // plasmic-import: jDe8VPrKN8I9/component
+import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
+import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
@@ -96,14 +100,49 @@ function PlasmicContact__RenderFunc(props) {
             plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <HalcyonNavBar
+            data-plasmic-name={"halcyonNavBar"}
+            data-plasmic-override={overrides.halcyonNavBar}
+            className={classNames("__wab_instance", sty.halcyonNavBar)}
+          />
+
+          <SectionContactUs
+            data-plasmic-name={"sectionContactUs"}
+            data-plasmic-override={overrides.sectionContactUs}
+            className={classNames("__wab_instance", sty.sectionContactUs)}
+          />
+
+          <HalcyonFooter
+            data-plasmic-name={"halcyonFooter"}
+            data-plasmic-override={overrides.halcyonFooter}
+            className={classNames("__wab_instance", sty.halcyonFooter)}
+          />
+
+          <HalcyonFooterBottom
+            data-plasmic-name={"halcyonFooterBottom"}
+            data-plasmic-override={overrides.halcyonFooterBottom}
+            className={classNames("__wab_instance", sty.halcyonFooterBottom)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "halcyonNavBar",
+    "sectionContactUs",
+    "halcyonFooter",
+    "halcyonFooterBottom"
+  ],
+
+  halcyonNavBar: ["halcyonNavBar"],
+  sectionContactUs: ["sectionContactUs"],
+  halcyonFooter: ["halcyonFooter"],
+  halcyonFooterBottom: ["halcyonFooterBottom"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -138,6 +177,10 @@ export const PlasmicContact = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    halcyonNavBar: makeNodeComponent("halcyonNavBar"),
+    sectionContactUs: makeNodeComponent("sectionContactUs"),
+    halcyonFooter: makeNodeComponent("halcyonFooter"),
+    halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
     // Metadata about props expected for PlasmicContact
     internalVariantProps: PlasmicContact__VariantProps,
     internalArgProps: PlasmicContact__ArgProps,

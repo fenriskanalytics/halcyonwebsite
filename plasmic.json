@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -419,7 +419,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -477,7 +478,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
@@ -677,6 +679,136 @@
           "cssFilePath": "plasmic/halcyon_website/PlasmicHalcyonFooterBottom.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "96Dpxbdurlwm",
+          "name": "BannerPolicies",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicBannerPolicies.jsx",
+          "importSpec": {
+            "modulePath": "BannerPolicies.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicBannerPolicies.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "AvYJy3RYh00v",
+          "name": "ContainerCookiesPolicy",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicContainerCookiesPolicy.jsx",
+          "importSpec": {
+            "modulePath": "ContainerCookiesPolicy.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicContainerCookiesPolicy.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "uLRgmd5xI0ma",
+          "name": "ContainerPrivacyPolicy",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicContainerPrivacyPolicy.jsx",
+          "importSpec": {
+            "modulePath": "ContainerPrivacyPolicy.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicContainerPrivacyPolicy.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kOi7agL8789G",
+          "name": "ContainerTermsOfService",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicContainerTermsOfService.jsx",
+          "importSpec": {
+            "modulePath": "ContainerTermsOfService.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicContainerTermsOfService.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "LXjBXx0xs4DF",
+          "name": "HomeSection",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicHomeSection.jsx",
+          "importSpec": {
+            "modulePath": "HomeSection.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicHomeSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "FL9UE5cenYH-",
+          "name": "NewsletterComponent",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicNewsletterComponent.jsx",
+          "importSpec": {
+            "modulePath": "NewsletterComponent.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicNewsletterComponent.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "FTD1V6ByjhQi",
+          "name": "HeroHomePage",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicHeroHomePage.jsx",
+          "importSpec": {
+            "modulePath": "HeroHomePage.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicHeroHomePage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "eI7BZkRwT6IZ",
+          "name": "ComponentAboutUs",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicComponentAboutUs.jsx",
+          "importSpec": {
+            "modulePath": "ComponentAboutUs.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicComponentAboutUs.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "OPun2yHK_93c",
+          "name": "SectionMeetTheTeam",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicSectionMeetTheTeam.jsx",
+          "importSpec": {
+            "modulePath": "SectionMeetTheTeam.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicSectionMeetTheTeam.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "jDe8VPrKN8I9",
+          "name": "SectionContactUs",
+          "type": "managed",
+          "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+          "renderModuleFilePath": "plasmic/halcyon_website/PlasmicSectionContactUs.jsx",
+          "importSpec": {
+            "modulePath": "SectionContactUs.jsx"
+          },
+          "cssFilePath": "plasmic/halcyon_website/PlasmicSectionContactUs.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -731,6 +863,26 @@
           "id": "N_bT3vO-Kw5y",
           "name": "2 (4).jpg",
           "filePath": "../public/plasmic/halcyon_website/images/_24Jpg.jpg"
+        },
+        {
+          "id": "378MH5YnPVMe",
+          "name": "image 8",
+          "filePath": "../public/plasmic/halcyon_website/images/image8.jpg"
+        },
+        {
+          "id": "0rJjuTsLYaKR",
+          "name": "woman-1995624_1920.jpg",
+          "filePath": "../public/plasmic/halcyon_website/images/woman19956241920Jpg.jpg"
+        },
+        {
+          "id": "oRZgibr84jlo",
+          "name": "image 12",
+          "filePath": "../public/plasmic/halcyon_website/images/image12.png"
+        },
+        {
+          "id": "nVQetqas1dru",
+          "name": "image 13",
+          "filePath": "../public/plasmic/halcyon_website/images/image13.png"
         }
       ],
       "indirect": false,

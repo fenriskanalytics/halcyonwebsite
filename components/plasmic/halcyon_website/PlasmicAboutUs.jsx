@@ -17,6 +17,11 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
+import ComponentAboutUs from "../../ComponentAboutUs"; // plasmic-import: eI7BZkRwT6IZ/component
+import SectionMeetTheTeam from "../../SectionMeetTheTeam"; // plasmic-import: OPun2yHK_93c/component
+import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
+import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
@@ -96,14 +101,57 @@ function PlasmicAboutUs__RenderFunc(props) {
             plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <HalcyonNavBar
+            data-plasmic-name={"halcyonNavBar"}
+            data-plasmic-override={overrides.halcyonNavBar}
+            className={classNames("__wab_instance", sty.halcyonNavBar)}
+          />
+
+          <ComponentAboutUs
+            data-plasmic-name={"componentAboutUs"}
+            data-plasmic-override={overrides.componentAboutUs}
+            className={classNames("__wab_instance", sty.componentAboutUs)}
+          />
+
+          <SectionMeetTheTeam
+            data-plasmic-name={"sectionMeetTheTeam"}
+            data-plasmic-override={overrides.sectionMeetTheTeam}
+            className={classNames("__wab_instance", sty.sectionMeetTheTeam)}
+          />
+
+          <HalcyonFooter
+            data-plasmic-name={"halcyonFooter"}
+            data-plasmic-override={overrides.halcyonFooter}
+            className={classNames("__wab_instance", sty.halcyonFooter)}
+          />
+
+          <HalcyonFooterBottom
+            data-plasmic-name={"halcyonFooterBottom"}
+            data-plasmic-override={overrides.halcyonFooterBottom}
+            className={classNames("__wab_instance", sty.halcyonFooterBottom)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "halcyonNavBar",
+    "componentAboutUs",
+    "sectionMeetTheTeam",
+    "halcyonFooter",
+    "halcyonFooterBottom"
+  ],
+
+  halcyonNavBar: ["halcyonNavBar"],
+  componentAboutUs: ["componentAboutUs"],
+  sectionMeetTheTeam: ["sectionMeetTheTeam"],
+  halcyonFooter: ["halcyonFooter"],
+  halcyonFooterBottom: ["halcyonFooterBottom"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -138,6 +186,11 @@ export const PlasmicAboutUs = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    halcyonNavBar: makeNodeComponent("halcyonNavBar"),
+    componentAboutUs: makeNodeComponent("componentAboutUs"),
+    sectionMeetTheTeam: makeNodeComponent("sectionMeetTheTeam"),
+    halcyonFooter: makeNodeComponent("halcyonFooter"),
+    halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
     // Metadata about props expected for PlasmicAboutUs
     internalVariantProps: PlasmicAboutUs__VariantProps,
     internalArgProps: PlasmicAboutUs__ArgProps,

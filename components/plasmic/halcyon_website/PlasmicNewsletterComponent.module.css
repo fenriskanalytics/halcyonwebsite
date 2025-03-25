@@ -1,0 +1,121 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: var(--token-pjNepow6wPZ7);
+  position: relative;
+  min-width: 0;
+  padding: 8px;
+}
+.root > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin-top: calc(0px - 11px);
+  height: calc(100% + 11px);
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 11px;
+}
+.h2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  padding-top: 22px;
+  color: var(--token-Gsg_nXB6YK5A);
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 12px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2 {
+    font-size: 24px;
+  }
+}
+.freeBox__fdu88 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 430px;
+  height: auto;
+  max-width: 100%;
+  padding: 0px;
+}
+.newsletterForm:global(.__wab_instance) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  object-fit: cover;
+  margin-top: 0px;
+  min-width: 0;
+  padding: 8px;
+}
+.formField__lnmid:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.numberInput:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.formField___9FH2V:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.input:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.formField__dLz3E:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.freeBox__pktBw {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.input2:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.button:global(.__wab_instance) {
+  margin-left: 8px;
+  margin-right: 8px;
+  background: var(--token-7HpDdqXawcwS);
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-family: "Playfair Display", serif;
+  color: var(--token-zy6xhYnWF8Y7);
+  min-width: 0;
+}

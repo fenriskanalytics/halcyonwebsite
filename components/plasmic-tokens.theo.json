@@ -1171,6 +1171,26 @@
       }
     },
     {
+      "name": "black",
+      "type": "color",
+      "value": "#000000",
+      "category": "color",
+      "meta": {
+        "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+        "id": "dsGwzDKA-xx1"
+      }
+    },
+    {
+      "name": "container",
+      "type": "spacing",
+      "value": "1440px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "4ek7yevYSmZU9MaEHzjjyJ",
+        "id": "pjNepow6wPZ7"
+      }
+    },
+    {
       "name": "light ivory",
       "type": "color",
       "value": "#F5F1EA",

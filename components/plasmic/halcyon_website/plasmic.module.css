@@ -35,6 +35,10 @@
   --plasmic-token-system-bg-container: var(--token-nSMnu5meEjYV);
   --token-rSJ6w1MJng6w: var(--antd-colorBgContainer);
   --plasmic-token-system-bg-container-2: var(--token-rSJ6w1MJng6w);
+  --token-pjNepow6wPZ7: 1440px;
+  --plasmic-token-container: var(--token-pjNepow6wPZ7);
+  --token-dsGwzDKA-xx1: #000000;
+  --plasmic-token-black: var(--token-dsGwzDKA-xx1);
 }
 
 .plasmic_tokens {

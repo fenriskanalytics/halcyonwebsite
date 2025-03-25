@@ -17,6 +17,11 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
+import BannerPolicies from "../../BannerPolicies"; // plasmic-import: 96Dpxbdurlwm/component
+import ContainerTermsOfService from "../../ContainerTermsOfService"; // plasmic-import: kOi7agL8789G/component
+import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
+import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
@@ -96,14 +101,68 @@ function PlasmicTermsOfService__RenderFunc(props) {
             plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <HalcyonNavBar
+            data-plasmic-name={"halcyonNavBar"}
+            data-plasmic-override={overrides.halcyonNavBar}
+            className={classNames("__wab_instance", sty.halcyonNavBar)}
+          />
+
+          <BannerPolicies
+            data-plasmic-name={"bannerPolicies"}
+            data-plasmic-override={overrides.bannerPolicies}
+            className={classNames("__wab_instance", sty.bannerPolicies)}
+            unnamedVariant2={true}
+          />
+
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <ContainerTermsOfService
+              data-plasmic-name={"containerTermsOfService"}
+              data-plasmic-override={overrides.containerTermsOfService}
+              className={classNames(
+                "__wab_instance",
+                sty.containerTermsOfService
+              )}
+            />
+          </section>
+          <HalcyonFooter
+            data-plasmic-name={"halcyonFooter"}
+            data-plasmic-override={overrides.halcyonFooter}
+            className={classNames("__wab_instance", sty.halcyonFooter)}
+          />
+
+          <HalcyonFooterBottom
+            data-plasmic-name={"halcyonFooterBottom"}
+            data-plasmic-override={overrides.halcyonFooterBottom}
+            className={classNames("__wab_instance", sty.halcyonFooterBottom)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "halcyonNavBar",
+    "bannerPolicies",
+    "section",
+    "containerTermsOfService",
+    "halcyonFooter",
+    "halcyonFooterBottom"
+  ],
+
+  halcyonNavBar: ["halcyonNavBar"],
+  bannerPolicies: ["bannerPolicies"],
+  section: ["section", "containerTermsOfService"],
+  containerTermsOfService: ["containerTermsOfService"],
+  halcyonFooter: ["halcyonFooter"],
+  halcyonFooterBottom: ["halcyonFooterBottom"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -138,6 +197,12 @@ export const PlasmicTermsOfService = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    halcyonNavBar: makeNodeComponent("halcyonNavBar"),
+    bannerPolicies: makeNodeComponent("bannerPolicies"),
+    section: makeNodeComponent("section"),
+    containerTermsOfService: makeNodeComponent("containerTermsOfService"),
+    halcyonFooter: makeNodeComponent("halcyonFooter"),
+    halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
     // Metadata about props expected for PlasmicTermsOfService
     internalVariantProps: PlasmicTermsOfService__VariantProps,
     internalArgProps: PlasmicTermsOfService__ArgProps,

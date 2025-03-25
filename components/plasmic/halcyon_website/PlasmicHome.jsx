@@ -18,6 +18,10 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
+import HomeSection from "../../HomeSection"; // plasmic-import: LXjBXx0xs4DF/component
+import HeroHomePage from "../../HeroHomePage"; // plasmic-import: FTD1V6ByjhQi/component
+import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
+import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
@@ -103,6 +107,30 @@ function PlasmicHome__RenderFunc(props) {
             data-plasmic-override={overrides.halcyonNavBar}
             className={classNames("__wab_instance", sty.halcyonNavBar)}
           />
+
+          <HomeSection
+            data-plasmic-name={"homeSection"}
+            data-plasmic-override={overrides.homeSection}
+            className={classNames("__wab_instance", sty.homeSection)}
+          />
+
+          <HeroHomePage
+            data-plasmic-name={"heroHomePage"}
+            data-plasmic-override={overrides.heroHomePage}
+            className={classNames("__wab_instance", sty.heroHomePage)}
+          />
+
+          <HalcyonFooter
+            data-plasmic-name={"halcyonFooter"}
+            data-plasmic-override={overrides.halcyonFooter}
+            className={classNames("__wab_instance", sty.halcyonFooter)}
+          />
+
+          <HalcyonFooterBottom
+            data-plasmic-name={"halcyonFooterBottom"}
+            data-plasmic-override={overrides.halcyonFooterBottom}
+            className={classNames("__wab_instance", sty.halcyonFooterBottom)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -110,8 +138,20 @@ function PlasmicHome__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  homePage: ["homePage", "halcyonNavBar"],
-  halcyonNavBar: ["halcyonNavBar"]
+  homePage: [
+    "homePage",
+    "halcyonNavBar",
+    "homeSection",
+    "heroHomePage",
+    "halcyonFooter",
+    "halcyonFooterBottom"
+  ],
+
+  halcyonNavBar: ["halcyonNavBar"],
+  homeSection: ["homeSection"],
+  heroHomePage: ["heroHomePage"],
+  halcyonFooter: ["halcyonFooter"],
+  halcyonFooterBottom: ["halcyonFooterBottom"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -147,6 +187,10 @@ export const PlasmicHome = Object.assign(
   {
     // Helper components rendering sub-elements
     halcyonNavBar: makeNodeComponent("halcyonNavBar"),
+    homeSection: makeNodeComponent("homeSection"),
+    heroHomePage: makeNodeComponent("heroHomePage"),
+    halcyonFooter: makeNodeComponent("halcyonFooter"),
+    halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,
     internalArgProps: PlasmicHome__ArgProps,

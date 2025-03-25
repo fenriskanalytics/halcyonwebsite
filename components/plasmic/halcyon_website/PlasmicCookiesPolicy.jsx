@@ -17,6 +17,11 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import HalcyonNavBar from "../../HalcyonNavBar"; // plasmic-import: UDe2_-rIrkzi/component
+import BannerPolicies from "../../BannerPolicies"; // plasmic-import: 96Dpxbdurlwm/component
+import ContainerCookiesPolicy from "../../ContainerCookiesPolicy"; // plasmic-import: AvYJy3RYh00v/component
+import HalcyonFooter from "../../HalcyonFooter"; // plasmic-import: WgtcOX7lLlZ3/component
+import HalcyonFooterBottom from "../../HalcyonFooterBottom"; // plasmic-import: DyM3o4afMIzM/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
@@ -96,14 +101,67 @@ function PlasmicCookiesPolicy__RenderFunc(props) {
             plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <HalcyonNavBar
+            data-plasmic-name={"halcyonNavBar"}
+            data-plasmic-override={overrides.halcyonNavBar}
+            className={classNames("__wab_instance", sty.halcyonNavBar)}
+          />
+
+          <BannerPolicies
+            data-plasmic-name={"bannerPolicies"}
+            data-plasmic-override={overrides.bannerPolicies}
+            className={classNames("__wab_instance", sty.bannerPolicies)}
+          />
+
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <ContainerCookiesPolicy
+              data-plasmic-name={"containerCookiesPolicy"}
+              data-plasmic-override={overrides.containerCookiesPolicy}
+              className={classNames(
+                "__wab_instance",
+                sty.containerCookiesPolicy
+              )}
+            />
+          </section>
+          <HalcyonFooter
+            data-plasmic-name={"halcyonFooter"}
+            data-plasmic-override={overrides.halcyonFooter}
+            className={classNames("__wab_instance", sty.halcyonFooter)}
+          />
+
+          <HalcyonFooterBottom
+            data-plasmic-name={"halcyonFooterBottom"}
+            data-plasmic-override={overrides.halcyonFooterBottom}
+            className={classNames("__wab_instance", sty.halcyonFooterBottom)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "halcyonNavBar",
+    "bannerPolicies",
+    "section",
+    "containerCookiesPolicy",
+    "halcyonFooter",
+    "halcyonFooterBottom"
+  ],
+
+  halcyonNavBar: ["halcyonNavBar"],
+  bannerPolicies: ["bannerPolicies"],
+  section: ["section", "containerCookiesPolicy"],
+  containerCookiesPolicy: ["containerCookiesPolicy"],
+  halcyonFooter: ["halcyonFooter"],
+  halcyonFooterBottom: ["halcyonFooterBottom"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -138,6 +196,12 @@ export const PlasmicCookiesPolicy = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    halcyonNavBar: makeNodeComponent("halcyonNavBar"),
+    bannerPolicies: makeNodeComponent("bannerPolicies"),
+    section: makeNodeComponent("section"),
+    containerCookiesPolicy: makeNodeComponent("containerCookiesPolicy"),
+    halcyonFooter: makeNodeComponent("halcyonFooter"),
+    halcyonFooterBottom: makeNodeComponent("halcyonFooterBottom"),
     // Metadata about props expected for PlasmicCookiesPolicy
     internalVariantProps: PlasmicCookiesPolicy__VariantProps,
     internalArgProps: PlasmicCookiesPolicy__ArgProps,
