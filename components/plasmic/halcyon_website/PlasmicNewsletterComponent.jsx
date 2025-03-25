@@ -14,27 +14,9 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateOnMutateForSpec,
-  generateStateOnChangeProp,
-  generateStateOnChangePropForCodeComponents,
-  generateStateValueProp,
-  initializeCodeComponentStates,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
-import {
-  executePlasmicDataOp,
-  usePlasmicInvalidate
-} from "@plasmicapp/react-web/lib/data-sources";
-import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
-import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
-import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
-import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 4ek7yevYSmZU9MaEHzjjyJ/projectcss
@@ -75,56 +57,6 @@ function PlasmicNewsletterComponent__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "newsletterForm.value",
-        type: "private",
-        variableType: "object",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        refName: "newsletterForm",
-        onMutate: generateOnMutateForSpec("value", FormWrapper_Helpers)
-      },
-      {
-        path: "newsletterForm.isSubmitting",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
-        refName: "newsletterForm",
-        onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
-      },
-      {
-        path: "numberInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "input.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      },
-      {
-        path: "input2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
-  const dataSourcesCtx = usePlasmicDataSourceContext();
-  const plasmicInvalidate = usePlasmicInvalidate();
   return (
     <Stack__
       as={"div"}
@@ -155,269 +87,19 @@ function PlasmicNewsletterComponent__RenderFunc(props) {
       >
         {"Sign Up for Membership Promotions"}
       </h2>
-      <div className={classNames(projectcss.all, sty.freeBox__fdu88)}>
-        {(() => {
-          const child$Props = {
-            className: classNames("__wab_instance", sty.newsletterForm),
-            extendedOnValuesChange: async (...eventArgs) => {
-              generateStateOnChangePropForCodeComponents(
-                $state,
-                "value",
-                ["newsletterForm", "value"],
-                FormWrapper_Helpers
-              ).apply(null, eventArgs);
-            },
-            formItems: [
-              { label: "Name", name: "name", inputType: "Text" },
-              { label: "Message", name: "message", inputType: "Text Area" }
-            ],
-
-            labelCol: { span: 8, horizontalOnly: true },
-            layout: "inline",
-            mode: "advanced",
-            onFinish: async values => {
-              const $steps = {};
-              $steps["defaultSubmit"] = true
-                ? (() => {
-                    const actionArgs = {
-                      dataOp: {
-                        sourceId: "wp17K6dTyNJfMVu3RB7ygH",
-                        opId: "5e87df9b-4060-4f89-ada0-ac8f258958f5",
-                        userArgs: {
-                          variables: [$state.newsletterForm.value]
-                        },
-                        cacheKey: null,
-                        invalidatedKeys: ["plasmic_refresh_all"],
-                        roleId: null
-                      }
-                    };
-                    return (async ({ dataOp, continueOnError }) => {
-                      try {
-                        const response = await executePlasmicDataOp(dataOp, {
-                          userAuthToken: dataSourcesCtx?.userAuthToken,
-                          user: dataSourcesCtx?.user
-                        });
-                        await plasmicInvalidate(dataOp.invalidatedKeys);
-                        return response;
-                      } catch (e) {
-                        if (!continueOnError) {
-                          throw e;
-                        }
-                        return e;
-                      }
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["defaultSubmit"] != null &&
-                typeof $steps["defaultSubmit"] === "object" &&
-                typeof $steps["defaultSubmit"].then === "function"
-              ) {
-                $steps["defaultSubmit"] = await $steps["defaultSubmit"];
-              }
-            },
-            onIsSubmittingChange: async (...eventArgs) => {
-              generateStateOnChangePropForCodeComponents(
-                $state,
-                "isSubmitting",
-                ["newsletterForm", "isSubmitting"],
-                FormWrapper_Helpers
-              ).apply(null, eventArgs);
-            },
-            ref: ref => {
-              $refs["newsletterForm"] = ref;
-            },
-            submitSlot: null,
-            wrapperCol: { span: 16, horizontalOnly: true }
-          };
-          initializeCodeComponentStates(
-            $state,
-            [
-              {
-                name: "value",
-                plasmicStateName: "newsletterForm.value"
-              },
-              {
-                name: "isSubmitting",
-                plasmicStateName: "newsletterForm.isSubmitting"
-              }
-            ],
-
-            [],
-            FormWrapper_Helpers ?? {},
-            child$Props
-          );
-          return (
-            <FormWrapper
-              data-plasmic-name={"newsletterForm"}
-              data-plasmic-override={overrides.newsletterForm}
-              {...child$Props}
-            >
-              <FormItemWrapper
-                className={classNames("__wab_instance", sty.formField__lnmid)}
-                hidden={true}
-                initialValue={undefined}
-                label={"id"}
-                name={"id"}
-              >
-                <AntdInputNumber
-                  data-plasmic-name={"numberInput"}
-                  data-plasmic-override={overrides.numberInput}
-                  className={classNames("__wab_instance", sty.numberInput)}
-                  onChange={async (...eventArgs) => {
-                    generateStateOnChangeProp($state, [
-                      "numberInput",
-                      "value"
-                    ]).apply(null, eventArgs);
-                  }}
-                  type={"number"}
-                  value={generateStateValueProp($state, [
-                    "numberInput",
-                    "value"
-                  ])}
-                />
-              </FormItemWrapper>
-              <FormItemWrapper
-                className={classNames("__wab_instance", sty.formField___9FH2V)}
-                hidden={true}
-                initialValue={undefined}
-                label={"created_at"}
-                name={"created_at"}
-              >
-                {(() => {
-                  const child$Props = {
-                    className: classNames("__wab_instance", sty.input),
-                    onChange: async (...eventArgs) => {
-                      generateStateOnChangePropForCodeComponents(
-                        $state,
-                        "value",
-                        ["input", "value"],
-                        AntdInput_Helpers
-                      ).apply(null, eventArgs);
-                    },
-                    value: generateStateValueProp($state, ["input", "value"])
-                  };
-                  initializeCodeComponentStates(
-                    $state,
-                    [
-                      {
-                        name: "value",
-                        plasmicStateName: "input.value"
-                      }
-                    ],
-
-                    [],
-                    AntdInput_Helpers ?? {},
-                    child$Props
-                  );
-                  return (
-                    <AntdInput
-                      data-plasmic-name={"input"}
-                      data-plasmic-override={overrides.input}
-                      {...child$Props}
-                    />
-                  );
-                })()}
-              </FormItemWrapper>
-              <FormItemWrapper
-                className={classNames("__wab_instance", sty.formField__dLz3E)}
-                label={"email"}
-                name={"email"}
-                noLabel={true}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__pktBw)}>
-                  {(() => {
-                    const child$Props = {
-                      className: classNames("__wab_instance", sty.input2),
-                      onChange: async (...eventArgs) => {
-                        generateStateOnChangePropForCodeComponents(
-                          $state,
-                          "value",
-                          ["input2", "value"],
-                          AntdInput_Helpers
-                        ).apply(null, eventArgs);
-                      },
-                      placeholder: "Enter Your Email",
-                      value: generateStateValueProp($state, ["input2", "value"])
-                    };
-                    initializeCodeComponentStates(
-                      $state,
-                      [
-                        {
-                          name: "value",
-                          plasmicStateName: "input2.value"
-                        }
-                      ],
-
-                      [],
-                      AntdInput_Helpers ?? {},
-                      child$Props
-                    );
-                    return (
-                      <AntdInput
-                        data-plasmic-name={"input2"}
-                        data-plasmic-override={overrides.input2}
-                        {...child$Props}
-                      />
-                    );
-                  })()}
-                  <AntdButton
-                    data-plasmic-name={"button"}
-                    data-plasmic-override={overrides.button}
-                    className={classNames("__wab_instance", sty.button)}
-                    size={"large"}
-                    submitsForm={"boolean"}
-                    type={"primary"}
-                  >
-                    <div
-                      data-plasmic-name={"text"}
-                      data-plasmic-override={overrides.text}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text
-                      )}
-                    >
-                      {"Submit"}
-                    </div>
-                  </AntdButton>
-                </div>
-              </FormItemWrapper>
-            </FormWrapper>
-          );
-        })()}
-      </div>
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      />
     </Stack__>
   );
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "h2",
-    "newsletterForm",
-    "numberInput",
-    "input",
-    "input2",
-    "button",
-    "text"
-  ],
-
+  root: ["root", "h2", "freeBox"],
   h2: ["h2"],
-  newsletterForm: [
-    "newsletterForm",
-    "numberInput",
-    "input",
-    "input2",
-    "button",
-    "text"
-  ],
-
-  numberInput: ["numberInput"],
-  input: ["input"],
-  input2: ["input2"],
-  button: ["button", "text"],
-  text: ["text"]
+  freeBox: ["freeBox"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -453,12 +135,7 @@ export const PlasmicNewsletterComponent = Object.assign(
   {
     // Helper components rendering sub-elements
     h2: makeNodeComponent("h2"),
-    newsletterForm: makeNodeComponent("newsletterForm"),
-    numberInput: makeNodeComponent("numberInput"),
-    input: makeNodeComponent("input"),
-    input2: makeNodeComponent("input2"),
-    button: makeNodeComponent("button"),
-    text: makeNodeComponent("text"),
+    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicNewsletterComponent
     internalVariantProps: PlasmicNewsletterComponent__VariantProps,
     internalArgProps: PlasmicNewsletterComponent__ArgProps
