@@ -87,19 +87,13 @@ function PlasmicNewsletterComponent__RenderFunc(props) {
       >
         {"Sign Up for Membership Promotions"}
       </h2>
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      />
     </Stack__>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h2", "freeBox"],
-  h2: ["h2"],
-  freeBox: ["freeBox"]
+  root: ["root", "h2"],
+  h2: ["h2"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -135,7 +129,6 @@ export const PlasmicNewsletterComponent = Object.assign(
   {
     // Helper components rendering sub-elements
     h2: makeNodeComponent("h2"),
-    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicNewsletterComponent
     internalVariantProps: PlasmicNewsletterComponent__VariantProps,
     internalArgProps: PlasmicNewsletterComponent__ArgProps
